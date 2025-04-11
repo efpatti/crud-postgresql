@@ -26,12 +26,16 @@ export default function UsersPage() {
  }, []);
 
  return (
-  <div className="p-6">
-   <h1 className="text-2xl font-bold mb-4">Usuários</h1>
-   <ul className="space-y-2">
+  <div className="p-6 min-h-screen bg-[#0d1117] text-white">
+   <h1 className="text-3xl font-bold mb-6 text-[#fdd835]">Usuários</h1>
+   <ul className="space-y-3">
     {users.map((user) => (
-     <li key={user.id} className="p-4 bg-gray-100 rounded">
-      <strong>{user.name}</strong> — {user.email}
+     <li
+      key={user.id}
+      className="p-4 rounded-lg bg-[#161b22] border border-[#a371f7] shadow-md"
+     >
+      <strong className="text-[#fdd835]">{user.name}</strong> —{" "}
+      <span className="text-[#82aaff]">{user.email}</span>
      </li>
     ))}
    </ul>
